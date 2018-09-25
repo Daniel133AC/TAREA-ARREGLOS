@@ -2,6 +2,24 @@
 
 using namespace std;
 
+int contcar(char str[]){
+    int i=0;
+    for(int c=0;str[c]!='\0';c++){
+        i++;
+    }
+    return i;
+}
+
+int contrep(char str[],char caracter){
+    int i=0;
+    for(int c=0;str[c]!='\0';c++){
+        if (str[c]==caracter){
+            i++;
+        }
+    }
+    return i;
+}
+
 long long sumelementos(const long long arr[],const int i){
     int suma=0;
     for(int j=0;j<=i;j++){
@@ -54,7 +72,7 @@ void invertir(long long arr[],const long long i){
 
 void ordenAD(long long arr[],const int i){
     string orden="";
-    cout<<"¿Como deseas ordenar tu arreglo? (A/B): ";
+    cout<<"Â¿Como deseas ordenar tu arreglo? (A/B): ";
     cin>>orden;
     cout<<endl;
 
@@ -99,6 +117,9 @@ int main()
     //cout<<sumelementos(daniel,17)<<endl;
     //cout<<minelementos(daniel,17)<<endl;
     //cout<<cantperfectos(daniel,17)<<endl;
-
+    char texto[]="HOLAA";
+    cout<<contcar(texto)<<endl;
+    cout<<contrep(texto,'A')<<endl;
+    
     return 0;
 }

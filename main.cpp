@@ -2,6 +2,18 @@
 
 using namespace std;
 
+bool pal(char str[]){
+    bool sep=true;
+    int cant=contcar(str);
+    int ult=cant-1;
+    for(int j=0;j<cant/2;j++){
+        if(str[ult]!=str[j]){
+            return false;
+        }
+        return true;
+    }
+}
+
 int contcar(char str[]){
     int i=0;
     for(int c=0;str[c]!='\0';c++){
@@ -120,6 +132,8 @@ int main()
     char texto[]="HOLAA";
     cout<<contcar(texto)<<endl;
     cout<<contrep(texto,'A')<<endl;
-    
+    if(pal(texto)==1){
+        cout<<"Es palindrome";}else{cout<<"No es palindrome";}
+    cout<<endl;
     return 0;
 }
